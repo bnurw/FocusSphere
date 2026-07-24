@@ -1,0 +1,36 @@
+/* ==========================================
+   FocusSphere Design System v1.0
+   Color Palette
+========================================== */
+
+:root {
+
+  /* Primary */
+  --primary: #4F46E5;
+  --primary-light: #6366F1;
+  --primary-dark: #3730A3;
+
+  /* Status */
+  --success: #22C55E;
+  --warning: #F59E0B;
+  --danger: #EF4444;
+  --info: #0EA5E9;
+
+  /* Background */
+  --bg-light: #F8FAFC;
+  --bg-dark: #0F172A;
+
+  /* Cards */
+  --card-light: #FFFFFF;
+  --card-dark: #1E293B;
+
+  /* Text */
+  --text-primary: #111827;
+  --text-secondary: #64748B;
+  --text-light: #F8FAFC;
+
+  /* Border */
+  --border-light: #E5E7EB;
+  --border-dark: #334155;
+
+}

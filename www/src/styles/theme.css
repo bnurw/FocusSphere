@@ -1,0 +1,18 @@
+/* ==========================================
+   FocusSphere Design System v1.0
+   Theme System
+========================================== */
+
+body{
+    background: var(--bg-light);
+    color: var(--text-primary);
+    transition: background 0.3s ease,
+                color 0.3s ease;
+}
+
+/* Dark Theme */
+
+body.dark{
+    background: var(--bg-dark);
+    color: var(--text-light);
+}
