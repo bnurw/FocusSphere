@@ -38,6 +38,18 @@ jobs:
         uses: android-actions/setup-android@v3
 
 
+      - name: Check Capacitor Android Files
+        run: |
+          ls -la android
+          ls -la android/capacitor-cordova-android-plugins
+          cat android/capacitor-cordova-android-plugins/cordova.variables.gradle
+
+
+      - name: Sync Capacitor Android
+        run: |
+          npx cap sync android
+
+
       - name: Build Web App
         run: |
           npm run build || echo "No web build script"
