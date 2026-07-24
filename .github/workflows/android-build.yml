@@ -1,0 +1,62 @@
+name: Build FocusSphere APK
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+
+      - name: Install dependencies
+        run: npm install
+
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+
+      - name: Build Web App
+        run: |
+          npm run build || echo "No web build script"
+
+
+      - name: Copy Web Assets
+        run: |
+          npx cap copy android
+
+
+      - name: Build APK
+        run: |
+          cd android
+          chmod +x gradlew
+          ./gradlew assembleDebug
+
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: FocusSphere-debug-apk
+          path: android/app/build/outputs/apk/debug/*.apk
