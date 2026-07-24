@@ -17,3 +17,4 @@ Acode + Termux
 ## License
 Private# rebuild
 # workflow update
+update
