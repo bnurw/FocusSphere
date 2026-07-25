@@ -41,7 +41,23 @@ const AppState = {
 
         "English"
 
-    ]
+    ],
     // ===== STUDY STATE END =====
+// ===== FOCUS STATE START =====
 
+focusSession: {
+
+    duration: 1500,
+
+    remaining: 1500,
+
+    running: false,
+
+    interval: null,
+
+    subject: ""
+
+},
+
+// ===== FOCUS STATE END =====
 };
