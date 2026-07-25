@@ -14,35 +14,34 @@ const AppState = {
 
     timerRunning: false,
 
-    timerInterval: null
-  // ===== STUDY STATE START =====
+    timerInterval: null,
 
-studySession: {
+    // ===== STUDY STATE START =====
+    studySession: {
 
-    subject: "",
+        subject: "",
 
-    targetMinutes: 25,
+        targetMinutes: 25,
 
-    completedMinutes: 0,
+        completedMinutes: 0,
 
-    isRunning: false
+        isRunning: false
 
-},
+    },
 
-subjects: [
+    subjects: [
 
-    "Mathematics",
+        "Mathematics",
 
-    "Physics",
+        "Physics",
 
-    "Chemistry",
+        "Chemistry",
 
-    "Biology",
+        "Biology",
 
-    "English"
+        "English"
 
-],
-
-// ===== STUDY STATE END =====
+    ]
+    // ===== STUDY STATE END =====
 
 };

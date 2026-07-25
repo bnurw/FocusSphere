@@ -18,3 +18,4 @@ Acode + Termux
 Private# rebuild
 # workflow update
 update
+update
